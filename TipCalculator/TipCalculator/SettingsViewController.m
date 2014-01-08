@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"Settings";
     }
     return self;
 }
@@ -39,6 +39,7 @@
     UIView *padding = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 17, 20)];
     self.defaultTipPercentage.leftView = padding;
     self.defaultTipPercentage.leftViewMode = UITextFieldViewModeAlways;
+    
     // Load default value
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *tip =[defaults objectForKey:@"defaultTip"];
@@ -52,6 +53,8 @@
 }
 
 - (IBAction)onFinishEdit:(id)sender {
+    
+    // Save default value
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:self.defaultTipPercentage.text forKey:@"defaultTip"];
     [defaults synchronize];
