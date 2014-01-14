@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922C38E0187CE72400337A91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C38DF187CE72400337A91 /* Foundation.framework */; };
+		922C38E2187CE72400337A91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C38E1187CE72400337A91 /* CoreGraphics.framework */; };
+		922C38E4187CE72400337A91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C38E3187CE72400337A91 /* UIKit.framework */; };
+		922C38EA187CE72400337A91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 922C38E8187CE72400337A91 /* InfoPlist.strings */; };
+		922C38EC187CE72400337A91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C38EB187CE72400337A91 /* main.m */; };
+		922C38F0187CE72400337A91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C38EF187CE72400337A91 /* AppDelegate.m */; };
+		922C38F8187CE72400337A91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C38F7187CE72400337A91 /* Images.xcassets */; };
+		922C38FF187CE72400337A91 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C38FE187CE72400337A91 /* XCTest.framework */; };
+		922C3900187CE72400337A91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C38DF187CE72400337A91 /* Foundation.framework */; };
+		922C3901187CE72400337A91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C38E3187CE72400337A91 /* UIKit.framework */; };
+		922C3909187CE72400337A91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 922C3907187CE72400337A91 /* InfoPlist.strings */; };
+		922C390B187CE72400337A91 /* TomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C390A187CE72400337A91 /* TomatoesTests.m */; };
+		922C391B187CE76400337A91 /* MovieListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C391A187CE76400337A91 /* MovieListViewController.m */; };
+		922C391E187CE7BD00337A91 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C391D187CE7BD00337A91 /* MovieViewController.m */; };
+		922C39221884D17D00337A91 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C39211884D17D00337A91 /* Movie.m */; };
+		922C39251884D3ED00337A91 /* MovieBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C39241884D3ED00337A91 /* MovieBuilder.m */; };
+		922C392A1885248500337A91 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C39291885248500337A91 /* MovieCell.m */; };
+		922C392C18852BFC00337A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922C392B18852BFC00337A91 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		922C3902187CE72400337A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922C38D4187CE72400337A91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922C38DB187CE72400337A91;
+			remoteInfo = Tomatoes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		922C38DC187CE72400337A91 /* Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		922C38DF187CE72400337A91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		922C38E1187CE72400337A91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		922C38E3187CE72400337A91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		922C38E7187CE72400337A91 /* Tomatoes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tomatoes-Info.plist"; sourceTree = "<group>"; };
+		922C38E9187CE72400337A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		922C38EB187CE72400337A91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		922C38ED187CE72400337A91 /* Tomatoes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tomatoes-Prefix.pch"; sourceTree = "<group>"; };
+		922C38EE187CE72400337A91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		922C38EF187CE72400337A91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		922C38F7187CE72400337A91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		922C38FD187CE72400337A91 /* TomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		922C38FE187CE72400337A91 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		922C3906187CE72400337A91 /* TomatoesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TomatoesTests-Info.plist"; sourceTree = "<group>"; };
+		922C3908187CE72400337A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		922C390A187CE72400337A91 /* TomatoesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TomatoesTests.m; sourceTree = "<group>"; };
+		922C3919187CE76400337A91 /* MovieListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListViewController.h; sourceTree = "<group>"; };
+		922C391A187CE76400337A91 /* MovieListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListViewController.m; sourceTree = "<group>"; };
+		922C391C187CE7BD00337A91 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		922C391D187CE7BD00337A91 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		922C39201884D17D00337A91 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		922C39211884D17D00337A91 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		922C39231884D3ED00337A91 /* MovieBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieBuilder.h; sourceTree = "<group>"; };
+		922C39241884D3ED00337A91 /* MovieBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieBuilder.m; sourceTree = "<group>"; };
+		922C39281885248500337A91 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		922C39291885248500337A91 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		922C392B18852BFC00337A91 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		922C38D9187CE72400337A91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C38E2187CE72400337A91 /* CoreGraphics.framework in Frameworks */,
+				922C38E4187CE72400337A91 /* UIKit.framework in Frameworks */,
+				922C38E0187CE72400337A91 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C38FA187CE72400337A91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C38FF187CE72400337A91 /* XCTest.framework in Frameworks */,
+				922C3901187CE72400337A91 /* UIKit.framework in Frameworks */,
+				922C3900187CE72400337A91 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		922C38D3187CE72400337A91 = {
+			isa = PBXGroup;
+			children = (
+				922C38E5187CE72400337A91 /* Tomatoes */,
+				922C3904187CE72400337A91 /* TomatoesTests */,
+				922C38DE187CE72400337A91 /* Frameworks */,
+				922C38DD187CE72400337A91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		922C38DD187CE72400337A91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922C38DC187CE72400337A91 /* Tomatoes.app */,
+				922C38FD187CE72400337A91 /* TomatoesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922C38DE187CE72400337A91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				922C38DF187CE72400337A91 /* Foundation.framework */,
+				922C38E1187CE72400337A91 /* CoreGraphics.framework */,
+				922C38E3187CE72400337A91 /* UIKit.framework */,
+				922C38FE187CE72400337A91 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		922C38E5187CE72400337A91 /* Tomatoes */ = {
+			isa = PBXGroup;
+			children = (
+				922C38EE187CE72400337A91 /* AppDelegate.h */,
+				922C38EF187CE72400337A91 /* AppDelegate.m */,
+				922C392B18852BFC00337A91 /* Main.storyboard */,
+				922C391F1884D14E00337A91 /* Models */,
+				922C392618851CAF00337A91 /* ViewControllers */,
+				922C39271885245400337A91 /* Views */,
+				922C38F7187CE72400337A91 /* Images.xcassets */,
+				922C38E6187CE72400337A91 /* Supporting Files */,
+			);
+			path = Tomatoes;
+			sourceTree = "<group>";
+		};
+		922C38E6187CE72400337A91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				922C38E7187CE72400337A91 /* Tomatoes-Info.plist */,
+				922C38E8187CE72400337A91 /* InfoPlist.strings */,
+				922C38EB187CE72400337A91 /* main.m */,
+				922C38ED187CE72400337A91 /* Tomatoes-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		922C3904187CE72400337A91 /* TomatoesTests */ = {
+			isa = PBXGroup;
+			children = (
+				922C390A187CE72400337A91 /* TomatoesTests.m */,
+				922C3905187CE72400337A91 /* Supporting Files */,
+			);
+			path = TomatoesTests;
+			sourceTree = "<group>";
+		};
+		922C3905187CE72400337A91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				922C3906187CE72400337A91 /* TomatoesTests-Info.plist */,
+				922C3907187CE72400337A91 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		922C391F1884D14E00337A91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				922C39201884D17D00337A91 /* Movie.h */,
+				922C39211884D17D00337A91 /* Movie.m */,
+				922C39231884D3ED00337A91 /* MovieBuilder.h */,
+				922C39241884D3ED00337A91 /* MovieBuilder.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		922C392618851CAF00337A91 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				922C3919187CE76400337A91 /* MovieListViewController.h */,
+				922C391A187CE76400337A91 /* MovieListViewController.m */,
+				922C391C187CE7BD00337A91 /* MovieViewController.h */,
+				922C391D187CE7BD00337A91 /* MovieViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		922C39271885245400337A91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				922C39281885248500337A91 /* MovieCell.h */,
+				922C39291885248500337A91 /* MovieCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		922C38DB187CE72400337A91 /* Tomatoes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922C390E187CE72400337A91 /* Build configuration list for PBXNativeTarget "Tomatoes" */;
+			buildPhases = (
+				922C38D8187CE72400337A91 /* Sources */,
+				922C38D9187CE72400337A91 /* Frameworks */,
+				922C38DA187CE72400337A91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tomatoes;
+			productName = Tomatoes;
+			productReference = 922C38DC187CE72400337A91 /* Tomatoes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		922C38FC187CE72400337A91 /* TomatoesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922C3911187CE72400337A91 /* Build configuration list for PBXNativeTarget "TomatoesTests" */;
+			buildPhases = (
+				922C38F9187CE72400337A91 /* Sources */,
+				922C38FA187CE72400337A91 /* Frameworks */,
+				922C38FB187CE72400337A91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				922C3903187CE72400337A91 /* PBXTargetDependency */,
+			);
+			name = TomatoesTests;
+			productName = TomatoesTests;
+			productReference = 922C38FD187CE72400337A91 /* TomatoesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		922C38D4187CE72400337A91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ben Chen";
+				TargetAttributes = {
+					922C38FC187CE72400337A91 = {
+						TestTargetID = 922C38DB187CE72400337A91;
+					};
+				};
+			};
+			buildConfigurationList = 922C38D7187CE72400337A91 /* Build configuration list for PBXProject "Tomatoes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 922C38D3187CE72400337A91;
+			productRefGroup = 922C38DD187CE72400337A91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				922C38DB187CE72400337A91 /* Tomatoes */,
+				922C38FC187CE72400337A91 /* TomatoesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		922C38DA187CE72400337A91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C392C18852BFC00337A91 /* Main.storyboard in Resources */,
+				922C38F8187CE72400337A91 /* Images.xcassets in Resources */,
+				922C38EA187CE72400337A91 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C38FB187CE72400337A91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C3909187CE72400337A91 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		922C38D8187CE72400337A91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C38F0187CE72400337A91 /* AppDelegate.m in Sources */,
+				922C391B187CE76400337A91 /* MovieListViewController.m in Sources */,
+				922C39251884D3ED00337A91 /* MovieBuilder.m in Sources */,
+				922C392A1885248500337A91 /* MovieCell.m in Sources */,
+				922C39221884D17D00337A91 /* Movie.m in Sources */,
+				922C38EC187CE72400337A91 /* main.m in Sources */,
+				922C391E187CE7BD00337A91 /* MovieViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C38F9187CE72400337A91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C390B187CE72400337A91 /* TomatoesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		922C3903187CE72400337A91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922C38DB187CE72400337A91 /* Tomatoes */;
+			targetProxy = 922C3902187CE72400337A91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		922C38E8187CE72400337A91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				922C38E9187CE72400337A91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		922C3907187CE72400337A91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				922C3908187CE72400337A91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		922C390C187CE72400337A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		922C390D187CE72400337A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		922C390F187CE72400337A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tomatoes/Tomatoes-Prefix.pch";
+				INFOPLIST_FILE = "Tomatoes/Tomatoes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		922C3910187CE72400337A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tomatoes/Tomatoes-Prefix.pch";
+				INFOPLIST_FILE = "Tomatoes/Tomatoes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		922C3912187CE72400337A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tomatoes.app/Tomatoes";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tomatoes/Tomatoes-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TomatoesTests/TomatoesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		922C3913187CE72400337A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tomatoes.app/Tomatoes";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tomatoes/Tomatoes-Prefix.pch";
+				INFOPLIST_FILE = "TomatoesTests/TomatoesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		922C38D7187CE72400337A91 /* Build configuration list for PBXProject "Tomatoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922C390C187CE72400337A91 /* Debug */,
+				922C390D187CE72400337A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922C390E187CE72400337A91 /* Build configuration list for PBXNativeTarget "Tomatoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922C390F187CE72400337A91 /* Debug */,
+				922C3910187CE72400337A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		922C3911187CE72400337A91 /* Build configuration list for PBXNativeTarget "TomatoesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922C3912187CE72400337A91 /* Debug */,
+				922C3913187CE72400337A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 922C38D4187CE72400337A91 /* Project object */;
+}
