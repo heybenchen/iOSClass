@@ -1,67 +1,67 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1319" measuredH="1023" mockupW="1239" mockupH="974">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1317" measuredH="1417" mockupW="1239" mockupH="1301">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::Component" x="80" y="49" w="1239" h="974" measuredW="1239" measuredH="974" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Component" x="78" y="201" w="1239" h="974" measuredW="1239" measuredH="974" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <override controlID="1" x="107" y="102" w="1024" h="21"/>
         <override controlID="-1"/>
         <src>$ACCOUNT/assets/iPads.bmml#iPad%20Landscape</src>
       </controlProperties>
     </control>
-    <control controlID="26" controlTypeID="com.balsamiq.mockups::Map" x="940" y="683" w="-1" h="-1" measuredW="252" measuredH="222" zOrder="3" locked="false" isInGroup="-1"/>
-    <control controlID="27" controlTypeID="com.balsamiq.mockups::Image" x="302" y="170" w="909" h="752" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Map" x="938" y="835" w="-1" h="-1" measuredW="252" measuredH="222" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Image" x="300" y="322" w="909" h="752" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="38" controlTypeID="com.balsamiq.mockups::Canvas" x="285" y="212" w="100" h="710" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Canvas" x="283" y="364" w="100" h="710" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <color>6710886</color>
       </controlProperties>
     </control>
-    <control controlID="40" controlTypeID="com.balsamiq.mockups::Button" x="186" y="170" w="141" h="194" measuredW="22" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Button" x="184" y="322" w="141" h="194" measuredW="22" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10027263</color>
         <menuIcon>false</menuIcon>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="41" controlTypeID="com.balsamiq.mockups::SubTitle" x="211" y="254" w="91" h="-1" measuredW="91" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::SubTitle" x="209" y="406" w="91" h="-1" measuredW="91" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <color>16777215</color>
         <text>Campus</text>
       </controlProperties>
     </control>
-    <control controlID="42" controlTypeID="com.balsamiq.mockups::Button" x="186" y="358" w="114" h="195" measuredW="22" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Button" x="184" y="510" w="114" h="195" measuredW="22" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10066329</color>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="43" controlTypeID="com.balsamiq.mockups::SubTitle" x="196" y="442" w="93" h="-1" measuredW="91" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::SubTitle" x="194" y="594" w="93" h="-1" measuredW="91" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <color>16777215</color>
         <text>Timeline</text>
       </controlProperties>
     </control>
-    <control controlID="44" controlTypeID="com.balsamiq.mockups::Button" x="186" y="546" w="114" h="194" measuredW="22" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Button" x="184" y="698" w="114" h="194" measuredW="22" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10066329</color>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="46" controlTypeID="com.balsamiq.mockups::Button" x="186" y="734" w="114" h="188" measuredW="22" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Button" x="184" y="886" w="114" h="188" measuredW="22" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10066329</color>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::SubTitle" x="206" y="815" w="78" h="-1" measuredW="74" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::SubTitle" x="204" y="967" w="78" h="-1" measuredW="74" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <color>16777215</color>
         <text>Videos</text>
       </controlProperties>
     </control>
-    <control controlID="48" controlTypeID="com.balsamiq.mockups::Paragraph" x="940" y="281" w="252" h="361" measuredW="200" measuredH="80" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Paragraph" x="938" y="433" w="252" h="361" measuredW="200" measuredH="80" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <color>3355443</color>
         <size>20</size>
@@ -69,33 +69,54 @@
         <text>Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20%0A%20%0AUt%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20%0A%20%0ADuis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident%2C%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum.</text>
       </controlProperties>
     </control>
-    <control controlID="49" controlTypeID="com.balsamiq.mockups::Title" x="740" y="198" w="-1" h="-1" measuredW="453" measuredH="63" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Title" x="738" y="350" w="-1" h="-1" measuredW="453" measuredH="63" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>false</bold>
         <size>60</size>
         <text>Yahoo%20Building%20C</text>
       </controlProperties>
     </control>
-    <control controlID="51" controlTypeID="com.balsamiq.mockups::Paragraph" x="464" y="812" w="455" h="66" measuredW="200" measuredH="80" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Paragraph" x="462" y="964" w="455" h="66" measuredW="200" measuredH="80" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20</text>
       </controlProperties>
     </control>
-    <control controlID="52" controlTypeID="com.balsamiq.mockups::SubTitle" x="464" y="779" w="161" h="-1" measuredW="161" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::SubTitle" x="462" y="931" w="161" h="-1" measuredW="161" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Did%20You%20Know%3F</text>
       </controlProperties>
     </control>
-    <control controlID="53" controlTypeID="com.balsamiq.mockups::Image" x="334" y="778" w="103" h="101" measuredW="77" measuredH="79" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Image" x="332" y="930" w="103" h="101" measuredW="77" measuredH="79" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="54" controlTypeID="com.balsamiq.mockups::SubTitle" x="196" y="630" w="95" h="-1" measuredW="96" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::SubTitle" x="194" y="782" w="95" h="-1" measuredW="96" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
         <color>16777215</color>
         <text>Ya-Who%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::Paragraph" x="194" y="1201" w="1057" h="105" measuredW="200" measuredH="80" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>4555150</color>
+        <size>28</size>
+        <text>*Design%20Note%3A*%0AThe%20background%20should%20be%20a%20very%20high%20quality%20shot%20of%20the%20building%20overlayed%20with%20a%20subtle%20gradient%20on%20the%20right%20%26%20bottom%20to%20make%20the%20text%20very%20clear.</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Paragraph" x="194" y="1312" w="1057" h="105" measuredW="200" measuredH="80" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16750848</color>
+        <size>28</size>
+        <text>*Interaction%20Note%3A*%0AThe%20user%20will%20be%20able%20to%20see%20all%20the%20buildings%20labled%20on%20the%20bottom-right%20map.%20Clicking%20on%20any%20other%20building%20will%20navigate%20the%20user%20to%20that%20location.</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::Paragraph" x="375" y="116" w="644" h="77" measuredW="200" measuredH="80" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>72</size>
+        <text>Campus%20Tour</text>
       </controlProperties>
     </control>
   </controls>
