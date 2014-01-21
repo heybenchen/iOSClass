@@ -27,6 +27,7 @@
     self = [super initWithStyle:style];
     if (self) {
         [self loadInitialItems];
+        [self.tableView sizeToFit];
     }
     return self;
 }
@@ -44,6 +45,7 @@
     [self loadInitialItems];
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@" Manage" style:UIBarButtonItemStyleBordered target:self action:@selector(EditTable:)];
+    addButton.tintColor = [UIColor whiteColor];
     [self.navigationItem setLeftBarButtonItem:addButton];
     
     // Uncomment the following line to preserve selection between presentations.
