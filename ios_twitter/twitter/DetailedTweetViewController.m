@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet UILabel *userScreenName;
 @property (weak, nonatomic) IBOutlet UITextView *body;
-//@property (weak, nonatomic) IBOutlet UILabel *timeStamp;
+@property (weak, nonatomic) IBOutlet UILabel *timeStamp;
 @property (weak, nonatomic) IBOutlet UILabel *retweetCount;
 @property (weak, nonatomic) IBOutlet UILabel *favoriteCount;
 
@@ -62,10 +62,15 @@
     self.body.text = self.tweet.text;
     self.userName.text = self.tweet.userName;
     self.userScreenName.text = self.tweet.userScreenName;
-    //self.timeStamp.text = [self.tweet getTimeSinceCreated];
     self.retweetCount.text = [NSString stringWithFormat:@"%@", self.tweet.retweetCount];
     self.favoriteCount.text = [NSString stringWithFormat:@"%@", self.tweet.favoriteCount];
     
+    // Time created
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"M/d/yy, hh:mm a"];
+    self.timeStamp.text = [dateFormatter stringFromDate:self.tweet.createdAt];
+    
+    // Button icons
     if (self.tweet.retweeted) {
         UIImage *retweetButtonImage = [UIImage imageNamed:@"retweet_on"];
         [self.retweetButton setImage:retweetButtonImage forState:UIControlStateNormal];
