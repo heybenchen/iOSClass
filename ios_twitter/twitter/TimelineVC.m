@@ -9,7 +9,7 @@
 #import "TimelineVC.h"
 #import "TweetCell.h"
 #import "ComposeViewController.h"
-#import "Tweet.h"
+#import "DetailedTweetViewController.h"
 
 @interface TimelineVC ()
 
@@ -191,6 +191,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DetailedTweetViewController *detailedTweetView = [[DetailedTweetViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:detailedTweetView animated:YES];
 }
 
 /*

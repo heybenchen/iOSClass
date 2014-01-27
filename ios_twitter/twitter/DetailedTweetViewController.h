@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CachedImageView.h"
 
 @interface DetailedTweetViewController : UIViewController
 
