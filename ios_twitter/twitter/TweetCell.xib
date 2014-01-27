@@ -43,7 +43,7 @@ It's dead.</string>
                         <rect key="frame" x="178" y="10" width="105" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="105" id="9hO-Vh-V7g"/>
+                            <constraint firstAttribute="width" constant="105" id="oi6-Ab-T3u"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,25 +77,25 @@ It's dead.</string>
                 </subviews>
                 <constraints>
                     <constraint firstItem="CwL-E9-F2V" firstAttribute="leading" secondItem="60L-nJ-eHh" secondAttribute="leading" id="18o-uO-Fn7"/>
-                    <constraint firstItem="4GB-O9-6vL" firstAttribute="leading" secondItem="PoI-Lx-NFd" secondAttribute="trailing" constant="5" id="1UY-wW-a5c"/>
+                    <constraint firstItem="OS9-Pg-e3F" firstAttribute="trailing" secondItem="60L-nJ-eHh" secondAttribute="trailing" id="2K1-En-cNA"/>
                     <constraint firstItem="60L-nJ-eHh" firstAttribute="top" secondItem="GyZ-we-DtN" secondAttribute="top" constant="20" symbolic="YES" id="2vt-x7-QV2"/>
-                    <constraint firstItem="4GB-O9-6vL" firstAttribute="baseline" secondItem="OS9-Pg-e3F" secondAttribute="baseline" id="7ax-3D-Rg7"/>
                     <constraint firstItem="yV7-oK-ndO" firstAttribute="baseline" secondItem="hdv-7p-v28" secondAttribute="baseline" id="8gT-IR-msf"/>
-                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="top" secondItem="4GB-O9-6vL" secondAttribute="top" id="CUy-kh-8jn"/>
+                    <constraint firstItem="4GB-O9-6vL" firstAttribute="baseline" secondItem="PoI-Lx-NFd" secondAttribute="baseline" id="EsP-4b-A8k"/>
+                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="top" secondItem="4GB-O9-6vL" secondAttribute="top" id="FH5-9a-daz"/>
+                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="leading" secondItem="saf-JJ-jEI" secondAttribute="trailing" constant="8" symbolic="YES" id="GYW-b4-eon"/>
                     <constraint firstItem="60L-nJ-eHh" firstAttribute="leading" secondItem="saf-JJ-jEI" secondAttribute="trailing" constant="8" symbolic="YES" id="L0m-Dy-df6"/>
                     <constraint firstItem="CwL-E9-F2V" firstAttribute="baseline" secondItem="hdv-7p-v28" secondAttribute="baseline" id="Mt9-bB-Gzf"/>
+                    <constraint firstAttribute="trailing" secondItem="OS9-Pg-e3F" secondAttribute="trailing" constant="13" id="NDH-GV-YE1"/>
                     <constraint firstItem="yV7-oK-ndO" firstAttribute="leading" secondItem="CwL-E9-F2V" secondAttribute="trailing" constant="43" id="Nok-Xy-6sh"/>
                     <constraint firstItem="saf-JJ-jEI" firstAttribute="leading" secondItem="GyZ-we-DtN" secondAttribute="leading" constant="10" id="OLh-9O-Iqw"/>
                     <constraint firstItem="CwL-E9-F2V" firstAttribute="top" secondItem="60L-nJ-eHh" secondAttribute="bottom" constant="2" id="OPj-JS-AEN"/>
                     <constraint firstItem="yV7-oK-ndO" firstAttribute="top" secondItem="hdv-7p-v28" secondAttribute="top" id="PbV-tn-fpO"/>
-                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="baseline" secondItem="4GB-O9-6vL" secondAttribute="baseline" id="Yzu-3v-CKk"/>
+                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="top" secondItem="GyZ-we-DtN" secondAttribute="top" constant="10" id="VfL-Fj-XLx"/>
+                    <constraint firstItem="4GB-O9-6vL" firstAttribute="leading" secondItem="PoI-Lx-NFd" secondAttribute="trailing" constant="5" id="XgF-w0-kY5"/>
                     <constraint firstAttribute="bottom" secondItem="60L-nJ-eHh" secondAttribute="bottom" constant="31" id="a6w-Fx-4y7"/>
-                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="leading" secondItem="saf-JJ-jEI" secondAttribute="trailing" constant="8" symbolic="YES" id="cQd-mh-AhS"/>
                     <constraint firstItem="CwL-E9-F2V" firstAttribute="baseline" secondItem="yV7-oK-ndO" secondAttribute="baseline" id="f4u-tp-gvZ"/>
-                    <constraint firstAttribute="trailing" secondItem="OS9-Pg-e3F" secondAttribute="trailing" constant="13" id="jvX-Km-kxW"/>
-                    <constraint firstItem="OS9-Pg-e3F" firstAttribute="top" secondItem="GyZ-we-DtN" secondAttribute="top" constant="13" id="pLu-S7-BO4"/>
-                    <constraint firstItem="60L-nJ-eHh" firstAttribute="trailing" secondItem="OS9-Pg-e3F" secondAttribute="trailing" id="sIk-y2-AT6"/>
-                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="top" secondItem="saf-JJ-jEI" secondAttribute="top" id="sJL-fm-i6j"/>
+                    <constraint firstItem="PoI-Lx-NFd" firstAttribute="top" secondItem="saf-JJ-jEI" secondAttribute="top" id="hAW-RC-Mp5"/>
+                    <constraint firstItem="4GB-O9-6vL" firstAttribute="baseline" secondItem="OS9-Pg-e3F" secondAttribute="baseline" id="sfx-JP-8Qk"/>
                     <constraint firstItem="hdv-7p-v28" firstAttribute="leading" secondItem="yV7-oK-ndO" secondAttribute="trailing" constant="40" id="utd-ix-uFO"/>
                     <constraint firstItem="yV7-oK-ndO" firstAttribute="top" secondItem="CwL-E9-F2V" secondAttribute="top" id="xxJ-uM-Nns"/>
                 </constraints>

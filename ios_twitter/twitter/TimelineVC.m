@@ -8,6 +8,8 @@
 
 #import "TimelineVC.h"
 #import "TweetCell.h"
+#import "ComposeViewController.h"
+#import "Tweet.h"
 
 @interface TimelineVC ()
 
@@ -93,6 +95,7 @@
     cell.body.text = tweet.text;
     cell.userName.text = tweet.userName;
     cell.userScreenName.text = tweet.userScreenName;
+    cell.timeStamp.text = [tweet getTimeSinceCreated];
     
     // Load profile image
     NSURL *url = [NSURL URLWithString:tweet.userProfileImage];
@@ -130,6 +133,19 @@
     CGFloat minHeight = padding + bodyLabelHeight + padding + padding/2;
     
     return MAX(combinedHeight, minHeight);
+}
+
+- (void)addTweetToTop:(Tweet *)tweet {
+    NSLog(@"Added %@", tweet);
+    if (self.tweets == nil) {
+        self.tweets = [[NSMutableArray alloc] initWithCapacity:21];
+    }
+    [self.tweets insertObject:tweet atIndex:0];
+    [self.tableView reloadData];
+}
+
+- (void)addItemViewController:(id)controller didFinishSendingTweet:(Tweet *)tweet {
+    [self addTweetToTop:tweet];
 }
 
 /*
@@ -196,7 +212,9 @@
 }
 
 - (void)onComposeButton {
-    //TODO
+    ComposeViewController *composeView = [[ComposeViewController alloc] initWithNibName:nil bundle:nil];
+    composeView.delegate = self;
+    [self presentViewController:composeView animated:YES completion:nil];
 }
 
 - (void)reload {

@@ -10,8 +10,8 @@
 #import "AFNetworking.h"
 
 #define TWITTER_BASE_URL [NSURL URLWithString:@"https://api.twitter.com/"]
-#define TWITTER_CONSUMER_KEY @"biYAqubJD0rK2cRatIQTZw"
-#define TWITTER_CONSUMER_SECRET @"2cygl2irBgMQVNuWJwMn6vXiyDnWtht7gSyuRnf0Fg"
+#define TWITTER_CONSUMER_KEY @"M1BrtT39T54q4kL1OMmFg"
+#define TWITTER_CONSUMER_SECRET @"Lo7cjEXJzBlgfbHgwcFUpY04pkSoCB8sqFnFUNTEA"
 
 static NSString * const kAccessTokenKey = @"kAccessTokenKey";
 
@@ -63,6 +63,11 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
         [params setObject:@(maxId) forKey:@"max_id"];
     }
     [self getPath:@"1.1/statuses/home_timeline.json" parameters:params success:success failure:failure];
+}
+
+- (void)postTweet:(NSString *)tweet success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"status": tweet}];
+    [self postPath:@"1.1/statuses/update.json" parameters:params success:success failure:failure];
 }
 
 #pragma mark - Private methods

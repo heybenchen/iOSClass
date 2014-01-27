@@ -52,6 +52,7 @@
         NSLog(@"success!");
     } failure:^(NSError *error) {
         [self onError];
+        NSLog(@"%@", error.description);
     }];
 }
 

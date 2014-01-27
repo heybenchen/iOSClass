@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ComposeViewController.h"
+#import "Tweet.h"
 
-@interface TimelineVC : UITableViewController
+@interface TimelineVC : UITableViewController <ModalViewControllerDelegate>
+
+@property (nonatomic) NSString *tweet;
+
+- (void)addTweetToTop:(Tweet *)tweet;
 
 @end
