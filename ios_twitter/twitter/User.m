@@ -21,7 +21,7 @@ static User *_currentUser;
     if (!_currentUser) {
         NSData *userData = [[NSUserDefaults standardUserDefaults] dataForKey:kCurrentUserKey];
         if (userData) {
-            NSDictionary *userDictionary = [NSJSONSerialization JSONObjectWithData:userData options:NSJSONReadingMutableContainers error:nil];
+            NSMutableDictionary *userDictionary = [NSJSONSerialization JSONObjectWithData:userData options:NSJSONReadingMutableContainers error:nil];
             _currentUser = [[User alloc] initWithDictionary:userDictionary];
         }
     }

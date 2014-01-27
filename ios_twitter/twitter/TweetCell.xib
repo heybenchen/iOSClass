@@ -57,19 +57,19 @@ It's dead.</string>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwL-E9-F2V">
-                        <rect key="frame" x="66" y="147" width="16" height="18"/>
+                        <rect key="frame" x="66" y="145" width="16" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" image="reply"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV7-oK-ndO">
-                        <rect key="frame" x="125" y="147" width="16" height="18"/>
+                        <rect key="frame" x="125" y="145" width="16" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" image="retweet"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdv-7p-v28">
-                        <rect key="frame" x="181" y="147" width="16" height="18"/>
+                        <rect key="frame" x="181" y="145" width="16" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" image="favorite"/>
@@ -88,7 +88,7 @@ It's dead.</string>
                     <constraint firstAttribute="trailing" secondItem="OS9-Pg-e3F" secondAttribute="trailing" constant="13" id="NDH-GV-YE1"/>
                     <constraint firstItem="yV7-oK-ndO" firstAttribute="leading" secondItem="CwL-E9-F2V" secondAttribute="trailing" constant="43" id="Nok-Xy-6sh"/>
                     <constraint firstItem="saf-JJ-jEI" firstAttribute="leading" secondItem="GyZ-we-DtN" secondAttribute="leading" constant="10" id="OLh-9O-Iqw"/>
-                    <constraint firstItem="CwL-E9-F2V" firstAttribute="top" secondItem="60L-nJ-eHh" secondAttribute="bottom" constant="2" id="OPj-JS-AEN"/>
+                    <constraint firstItem="CwL-E9-F2V" firstAttribute="top" secondItem="60L-nJ-eHh" secondAttribute="bottom" id="OPj-JS-AEN"/>
                     <constraint firstItem="yV7-oK-ndO" firstAttribute="top" secondItem="hdv-7p-v28" secondAttribute="top" id="PbV-tn-fpO"/>
                     <constraint firstItem="PoI-Lx-NFd" firstAttribute="top" secondItem="GyZ-we-DtN" secondAttribute="top" constant="10" id="VfL-Fj-XLx"/>
                     <constraint firstItem="4GB-O9-6vL" firstAttribute="leading" secondItem="PoI-Lx-NFd" secondAttribute="trailing" constant="5" id="XgF-w0-kY5"/>

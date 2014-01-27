@@ -10,9 +10,9 @@
 
 @implementation RestObject
 
-- (id)initWithDictionary:(NSDictionary *)data {
+- (id)initWithDictionary:(NSMutableDictionary *)data {
     if (self = [super init]) {
-        _data = data;
+        _data = [data mutableCopy];
     }
     
     return self;

@@ -10,11 +10,16 @@
 
 @implementation Tweet
 
+@synthesize tweetId;
 @synthesize text;
 @synthesize userName;
 @synthesize userScreenName;
 @synthesize userProfileImage;
 @synthesize createdAt;
+@synthesize retweeted;
+@synthesize favorited;
+@synthesize retweetCount;
+@synthesize favoriteCount;
 
 // Time conversion variables
 long sSecsInAYear = 31536000;
@@ -22,6 +27,34 @@ long sSecsInAMonth = 2592000;
 long sSecsInADay = 86400;
 long sSecsInAHour = 3600;
 long sSecsInAMin = 60;
+
+- (NSString *)tweetId {
+    return [self.data valueOrNilForKeyPath:@"id_str"];
+}
+
+- (NSNumber *)retweetCount {
+    return [self.data valueOrNilForKeyPath:@"retweet_count"];
+}
+
+- (NSNumber *)favoriteCount {
+    return [self.data valueOrNilForKeyPath:@"favorite_count"];
+}
+
+- (BOOL)retweeted {
+    int isRetweeded = [[self.data valueOrNilForKeyPath:@"retweeted"] integerValue];
+    if (isRetweeded == 0) {
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)favorited {
+    int isFavorited = [[self.data valueOrNilForKeyPath:@"favorited"] integerValue];
+    if (isFavorited == 0) {
+        return NO;
+    }
+    return YES;
+}
 
 - (NSString *)text {
     NSString *string = [self.data valueOrNilForKeyPath:@"text"];
@@ -81,7 +114,7 @@ long sSecsInAMin = 60;
 
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array {
     NSMutableArray *tweets = [[NSMutableArray alloc] initWithCapacity:array.count];
-    for (NSDictionary *params in array) {
+    for (NSMutableDictionary *params in array) {
         [tweets addObject:[[Tweet alloc] initWithDictionary:params]];
     }
     return tweets;

@@ -46,7 +46,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pencil.png"] style:UIBarButtonItemStylePlain target:self action:@selector(onComposeButton)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(onComposeButton)];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
     //load prototype table cell nib
@@ -59,6 +59,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,16 +90,42 @@
     Tweet *tweet = self.tweets[indexPath.row];
     
     //set width depending on device orientation
-    cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, tableView.frame.size.width, cell.frame.size.height);
+    /*cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, tableView.frame.size.width, cell.frame.size.height);
     CGFloat bodyLabelHeight = [self sizeOfLabel:cell.body withText:tweet.text].height;
     
     cell.body.frame = CGRectMake(cell.body.frame.origin.x, cell.body.frame.origin.y, cell.body.frame.size.width, bodyLabelHeight);
+    */
     
     // Bind data
     cell.body.text = tweet.text;
     cell.userName.text = tweet.userName;
     cell.userScreenName.text = tweet.userScreenName;
     cell.timeStamp.text = [tweet getTimeSinceCreated];
+    
+    if (tweet.retweeted){
+        UIImage *btnImage = [UIImage imageNamed:@"retweet_on"];
+        [cell.retweetButton setImage:btnImage forState:UIControlStateNormal];
+    } else {
+        UIImage *btnImage = [UIImage imageNamed:@"retweet"];
+        [cell.retweetButton setImage:btnImage forState:UIControlStateNormal];
+    }
+    if (tweet.favorited){
+        UIImage *btnImage = [UIImage imageNamed:@"favorite_on"];
+        [cell.favoriteButton setImage:btnImage forState:UIControlStateNormal];
+    } else {
+        UIImage *btnImage = [UIImage imageNamed:@"favorite"];
+        [cell.favoriteButton setImage:btnImage forState:UIControlStateNormal];
+    }
+    
+    // Button Clicks
+    cell.replyButton.tag=indexPath.row;
+    [cell.replyButton addTarget:self action:@selector(replyButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.retweetButton.tag=indexPath.row;
+    [cell.retweetButton addTarget:self action:@selector(retweetButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+
+    cell.favoriteButton.tag=indexPath.row;
+    [cell.favoriteButton addTarget:self action:@selector(favoriteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     // Load profile image
     NSURL *url = [NSURL URLWithString:tweet.userProfileImage];
@@ -189,10 +219,13 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     DetailedTweetViewController *detailedTweetView = [[DetailedTweetViewController alloc] initWithNibName:nil bundle:nil];
+    detailedTweetView.tweet = self.tweets[indexPath.row];
+
     [self.navigationController pushViewController:detailedTweetView animated:YES];
 }
 
@@ -210,17 +243,20 @@
 
 #pragma mark - Private methods
 
-- (void)onSignOutButton {
+- (void)onSignOutButton
+{
     [User setCurrentUser:nil];
 }
 
-- (void)onComposeButton {
+- (void)onComposeButton
+{
     ComposeViewController *composeView = [[ComposeViewController alloc] initWithNibName:nil bundle:nil];
     composeView.delegate = self;
     [self presentViewController:composeView animated:YES completion:nil];
 }
 
-- (void)reload {
+- (void)reload
+{
     [[TwitterClient instance] homeTimelineWithCount:20 sinceId:0 maxId:0 success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"%@", response);
         self.tweets = [Tweet tweetsWithArray:response];
@@ -228,6 +264,77 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error.description);
     }];
+}
+
+- (void)replyButtonClicked:(id)sender
+{
+    UIButton *senderButton = (UIButton *)sender;
+    NSIndexPath *path = [NSIndexPath indexPathForRow:senderButton.tag inSection:0];
+    ComposeViewController *composeView = [[ComposeViewController alloc] initWithNibName:nil bundle:nil];
+    Tweet *tweet = self.tweets[path.row];
+    composeView.replyToId = tweet.userScreenName;
+    composeView.delegate = self;
+    [self presentViewController:composeView animated:YES completion:nil];
+}
+
+- (void)retweetButtonClicked:(id)sender
+{
+    UIButton *senderButton = (UIButton *)sender;
+    NSIndexPath *path = [NSIndexPath indexPathForRow:senderButton.tag inSection:0];
+    Tweet *tweet = self.tweets[path.row];
+    [[TwitterClient instance] postRetweet:tweet.tweetId success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"%@", response);
+        UIImage *btnImage = [UIImage imageNamed:@"retweet_on"];
+        [(UIButton *)sender setImage:btnImage forState:UIControlStateNormal];
+        [tweet.data setValue:[NSNumber numberWithBool:1] forKey:@"retweeted"];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to retweet."
+                                                        message:@"Please check your connection and try again later."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+}
+
+- (void)favoriteButtonClicked:(id)sender
+{
+    UIButton *senderButton = (UIButton *)sender;
+    NSIndexPath *path = [NSIndexPath indexPathForRow:senderButton.tag inSection:0];
+    Tweet *tweet = self.tweets[path.row];
+    if (!tweet.favorited) {
+        [[TwitterClient instance] postFavoriteCreate:tweet.tweetId success:^(AFHTTPRequestOperation *operation, id response) {
+            NSLog(@"%@", response);
+            UIImage *btnImage = [UIImage imageNamed:@"favorite_on"];
+            [(UIButton *)sender setImage:btnImage forState:UIControlStateNormal];
+            [tweet.data setValue:[NSNumber numberWithBool:1] forKey:@"favorited"];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"%@", error);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to favorite."
+                                                            message:@"Please check your connection and try again later."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    } else {
+        [[TwitterClient instance] postFavoriteDestroy:tweet.tweetId success:^(AFHTTPRequestOperation *operation, id response) {
+            NSLog(@"%@", response);
+            UIImage *btnImage = [UIImage imageNamed:@"favorite"];
+            [(UIButton *)sender setImage:btnImage forState:UIControlStateNormal];
+            [tweet.data setValue:[NSNumber numberWithBool:0] forKey:@"favorited"];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"%@", error);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to remove favorite."
+                                                            message:@"Please check your connection and try again later."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
+
 }
 
 @end

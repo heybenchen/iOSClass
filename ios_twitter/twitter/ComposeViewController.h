@@ -19,4 +19,6 @@
 
 @property (nonatomic, weak) id <ModalViewControllerDelegate> delegate;
 
+@property (strong) NSString *replyToId;
+
 @end

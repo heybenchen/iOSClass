@@ -205,12 +205,12 @@
 		42CC895A17AF525100B6D34B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				922233801895F6F500EE9EF9 /* ComposeViewController.h */,
-				922233811895F6F500EE9EF9 /* ComposeViewController.m */,
-				922233821895F6F500EE9EF9 /* ComposeViewController.xib */,
 				92223385189624E400EE9EF9 /* DetailedTweetViewController.h */,
 				92223386189624E400EE9EF9 /* DetailedTweetViewController.m */,
 				92223387189624E400EE9EF9 /* DetailedTweetViewController.xib */,
+				922233801895F6F500EE9EF9 /* ComposeViewController.h */,
+				922233811895F6F500EE9EF9 /* ComposeViewController.m */,
+				922233821895F6F500EE9EF9 /* ComposeViewController.xib */,
 				42CC895B17AF6FBB00B6D34B /* TimelineVC.h */,
 				42CC895C17AF6FBB00B6D34B /* TimelineVC.m */,
 				42CC89A717B0C31900B6D34B /* SignedOutVC.h */,

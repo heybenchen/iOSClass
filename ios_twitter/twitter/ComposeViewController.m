@@ -50,6 +50,10 @@ NSInteger maxCharacterCount = 140;
     self.userName.text = [self.currentUser objectForKey:@"name"];
     self.userScreenName.text = [NSString stringWithFormat:@"@%@",[self.currentUser objectForKey:@"screen_name"]];
     
+    if (self.replyToId.length != 0) {
+        [self.body becomeFirstResponder];
+    }
+    
     // Load profile image
     NSURL *url = [NSURL URLWithString:[self.currentUser objectForKey:@"profile_image_url"]];
     if ([self.userImage isImageWithURLNew:url.absoluteString]) {
@@ -101,17 +105,24 @@ NSInteger maxCharacterCount = 140;
     return YES;
 }
 
-- (BOOL) textViewShouldBeginEditing:(UITextView *)textView {
+- (BOOL) textViewShouldBeginEditing:(UITextView *)textView
+{
     // Clear placeholder text
     if(textView.tag == 0) {
-        textView.text = @"";
+        if (self.replyToId.length != 0) {
+            textView.text = [NSString stringWithFormat:@"%@ ", self.replyToId];
+            [self textViewDidChange:self.body];
+        } else {
+            textView.text = @"";
+        }
         textView.textColor = [UIColor blackColor];
         textView.tag = 1;
     }
     return YES;
 }
 
-- (void)textViewDidEndEditing:(UITextView *)textView {
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
     // Add placeholder text back
     if([textView.text length] == 0)
     {
@@ -121,35 +132,48 @@ NSInteger maxCharacterCount = 140;
     }
 }
 
-- (IBAction)onCancelClicked:(id)sender {
+- (IBAction)onCancelClicked:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)onTweetClicked:(id)sender {
-    [[TwitterClient instance] postTweet:self.body.text success:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"%@", response);
-        Tweet *newTweet = [[Tweet alloc] initWithDictionary:response];
-        [self.delegate addItemViewController:self didFinishSendingTweet:newTweet];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to post tweet."
-                                                        message:@"Please check your connection and try again later."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        
-        // Send tweet to timeline
-        /*
-        Tweet *newTweet = [[Tweet alloc] init];
-        [newTweet setUserProfileImage:[self.currentUser objectForKey:@"profile_image_url"]];
-        [newTweet setText:self.body.text];
-        [newTweet setUserName:[self.currentUser objectForKey:@"name"]];
-        [newTweet setUserScreenName:[self.currentUser objectForKey:@"screen_name"]];
-        [newTweet setCreatedAt:[NSDate date]];
-         */
-    }];
+- (IBAction)onTweetClicked:(id)sender
+{
+    if (self.replyToId.length != 0) {
+        [[TwitterClient instance] postTweetInReply:self.body.text replyTo:self.replyToId success:^(AFHTTPRequestOperation *operation, id response) {
+            NSLog(@"%@", response);
+            
+            // Update the timeline to show the new tweet
+            Tweet *newTweet = [[Tweet alloc] initWithDictionary:response];
+            [self.delegate addItemViewController:self didFinishSendingTweet:newTweet];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"%@", error);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to post tweet."
+                                                            message:@"Please check your connection and try again later."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    } else {
+        [[TwitterClient instance] postTweet:self.body.text success:^(AFHTTPRequestOperation *operation, id response) {
+            NSLog(@"%@", response);
+            
+            // Update the timeline to show the new tweet
+            Tweet *newTweet = [[Tweet alloc] initWithDictionary:response];
+            [self.delegate addItemViewController:self didFinishSendingTweet:newTweet];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"%@", error);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to post tweet."
+                                                            message:@"Please check your connection and try again later."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
 }
 
 @end

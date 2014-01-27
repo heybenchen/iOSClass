@@ -70,6 +70,28 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
     [self postPath:@"1.1/statuses/update.json" parameters:params success:success failure:failure];
 }
 
+- (void)postTweetInReply:(NSString *)tweet replyTo:(NSString *)userId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"status": tweet, @"in_reply_to_status_id": userId}];
+    [self postPath:@"1.1/statuses/update.json" parameters:params success:success failure:failure];
+}
+
+- (void)postRetweet:(NSString *)tweetId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSString *path = [NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/retweet/%@.json", tweetId];
+    [self postPath:path parameters:nil success:success failure:failure];
+}
+
+#pragma mark - Favorites API
+
+- (void)postFavoriteCreate:(NSString *)tweetId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"id": tweetId}];
+    [self postPath:@"https://api.twitter.com/1.1/favorites/create.json" parameters:params success:success failure:failure];
+}
+
+- (void)postFavoriteDestroy:(NSString *)tweetId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"id": tweetId}];
+    [self postPath:@"https://api.twitter.com/1.1/favorites/destroy.json" parameters:params success:success failure:failure];
+}
+
 #pragma mark - Private methods
 
 - (void)setAccessToken:(AFOAuth1Token *)accessToken {
