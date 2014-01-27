@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1273" measuredH="1171" mockupW="1239" mockupH="1142">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1273" measuredH="1386" mockupW="1239" mockupH="1357">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::Component" x="34" y="197" w="1239" h="974" measuredW="1239" measuredH="974" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -18,6 +18,20 @@
       <controlProperties>
         <crop>86%2C0%2C873%2C1000</crop>
         <src>./assets/yahoologoviolet.jpg</src>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Paragraph" x="125" y="1281" w="1057" h="105" measuredW="200" measuredH="80" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16750848</color>
+        <size>28</size>
+        <text>*Interaction%20Note%3A*%0AIf%20nobody%20interacts%20with%20the%20app%20for%205%20mins%2C%20it%20should%20return%20to%20the%20home%20page.</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Paragraph" x="125" y="1193" w="1057" h="105" measuredW="200" measuredH="80" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>4555150</color>
+        <size>28</size>
+        <text>*Design%20Note%3A*%0AThis%20home%20page%20should%20show%20a%20rotating%20slideshow%20or%20carousel%20of%20all%20the%20tabs.</text>
       </controlProperties>
     </control>
   </controls>
