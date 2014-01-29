@@ -132,7 +132,7 @@
         NSLog(@"%@", response);
         UIImage *btnImage = [UIImage imageNamed:@"retweet_on"];
         [self.retweetButton setImage:btnImage forState:UIControlStateNormal];
-        [self.tweet.data setValue:[NSNumber numberWithBool:1] forKey:@"retweeted"];
+        [self.tweet.data setValue:[NSNumber numberWithBool:YES] forKey:@"retweeted"];
         self.retweetCount.text = [NSString stringWithFormat:@"%d", [self.retweetCount.text integerValue] + 1];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
@@ -151,7 +151,7 @@
             NSLog(@"%@", response);
             UIImage *btnImage = [UIImage imageNamed:@"favorite_on"];
             [self.favoriteButton setImage:btnImage forState:UIControlStateNormal];
-            [self.tweet.data setValue:[NSNumber numberWithBool:1] forKey:@"favorited"];
+            [self.tweet.data setValue:[NSNumber numberWithBool:YES] forKey:@"favorited"];
             self.favoriteCount.text = [NSString stringWithFormat:@"%d", [self.favoriteCount.text integerValue] + 1];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"%@", error);
@@ -167,7 +167,7 @@
             NSLog(@"%@", response);
             UIImage *btnImage = [UIImage imageNamed:@"favorite"];
             [self.favoriteButton setImage:btnImage forState:UIControlStateNormal];
-            [self.tweet.data setValue:[NSNumber numberWithBool:0] forKey:@"favorited"];
+            [self.tweet.data setValue:[NSNumber numberWithBool:NO] forKey:@"favorited"];
             self.favoriteCount.text = [NSString stringWithFormat:@"%d", [self.favoriteCount.text integerValue] - 1];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"%@", error);
