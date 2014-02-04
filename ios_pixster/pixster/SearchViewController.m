@@ -23,23 +23,6 @@
     [super viewDidLoad];
     
     self.imageResults = [NSMutableArray array];
-    
-    //TEST
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@", [@"Banana" stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        id results = [JSON valueForKeyPath:@"responseData.results"];
-        NSLog(@"%@", results);
-        if ([results isKindOfClass:[NSArray class]]) {
-            [self.imageResults removeAllObjects];
-            [self.imageResults addObjectsFromArray:results];
-            // [self.searchDisplayController.searchResultsTableView reloadData];
-            [self.collectionView reloadData];
-        }
-    } failure:nil];
-    
-    [operation start];
 }
 
 - (void)didReceiveMemoryWarning
