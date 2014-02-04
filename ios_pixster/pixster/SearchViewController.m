@@ -85,7 +85,7 @@
 
 - (void)searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller {
     [self.imageResults removeAllObjects];
-    [self.searchDisplayController.searchResultsTableView reloadData];
+    [self.collectionView reloadData];
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -106,7 +106,7 @@
         if ([results isKindOfClass:[NSArray class]]) {
             [self.imageResults removeAllObjects];
             [self.imageResults addObjectsFromArray:results];
-            [self.searchDisplayController.searchResultsTableView reloadData];
+            [self.collectionView reloadData];
         }
     } failure:nil];
     
